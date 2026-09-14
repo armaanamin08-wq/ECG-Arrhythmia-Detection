@@ -1,0 +1,29 @@
+# Python virtual environment
+venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# VS Code settings
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+
+# Large downloaded MIT-BIH raw dataset
+data/mitdb/
+
+# Local duplicate Record 100 files
+data/*.dat
+data/*.hea
+data/*.atr
+
+# Temporary files
+*.tmp
+# Generated processed dataset
+data/processed_heartbeat_dataset.npz
