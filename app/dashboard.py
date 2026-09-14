@@ -147,13 +147,8 @@ st.header(
     "ECG Signal Explorer"
 )
 
-record = wfdb.rdrecord(
-    "data/100"
-)
-annotation = wfdb.rdann(
-    "data/100",
-    "atr"
-)
+record = wfdb.rdrecord("data/mitdb/100")
+annotation = wfdb.rdann("data/mitdb/100", "atr")
 
 sampling_frequency = record.fs
 
@@ -310,7 +305,7 @@ fig.update_layout(
 
 st.plotly_chart(
     fig,
-    use_container_width=True
+    width="stretch"
 )
 
 
@@ -599,7 +594,7 @@ if (
 
     st.plotly_chart(
         beat_fig,
-        use_container_width=True
+        width="stretch"
     )
     
 
@@ -811,7 +806,7 @@ if (
 
     st.plotly_chart(
         probability_fig,
-        use_container_width=True
+        width="stretch"
     )
 
     st.caption(
@@ -918,7 +913,7 @@ robustness_fig.update_layout(
 
 st.plotly_chart(
     robustness_fig,
-    use_container_width=True
+    width="stretch"
 )
 
 
@@ -1038,7 +1033,7 @@ importance_fig.update_layout(
 
 st.plotly_chart(
     importance_fig,
-    use_container_width=True
+    width="stretch"
 )
 
 st.write(
