@@ -1,4 +1,11 @@
 # ECG Arrhythmia Detection & Signal Robustness Analysis
+## Live Demo
+
+**[Launch the Interactive ECG Arrhythmia Dashboard](https://ecg-arrhythmia-dashboard-xpb9.onrender.com)**
+
+Explore ECG waveforms, R-peak detection, heartbeat features, machine-learning predictions, model interpretation, and signal-robustness results through an interactive Streamlit dashboard.
+
+> Note: The dashboard is an educational biomedical engineering prototype and is not intended for clinical diagnosis.
 
 A biomedical engineering project that combines ECG signal processing,
 physiological feature engineering, machine learning, validation, and
@@ -340,6 +347,13 @@ Important limitations include:
 - Matplotlib
 - Plotly
 - Streamlit
+## Installation and Usage
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/armaanamin08-wq/ECG-Arrhythmia-Detection.git
+cd ECG-Arrhythmia-Detection
 
 ## Project Structure
 
