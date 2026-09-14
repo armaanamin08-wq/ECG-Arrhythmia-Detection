@@ -131,6 +131,38 @@ rhythm.
 
 Combining timing and morphology allows the model to use both when a
 heartbeat occurs and the shape of its electrical waveform.
+## Key Results
+
+### Heartbeat Classification
+
+The Random Forest achieved **88.08% overall accuracy** on held-out
+ECG records, with **97.5% recall for ventricular ectopic (V) beats**.
+Performance varied substantially across heartbeat classes, emphasizing
+the importance of class-specific evaluation.
+
+![Random Forest Confusion Matrix](results/random_forest_confusion_matrix.png)
+
+### Physiological Feature Importance
+
+The model used both heartbeat timing and ECG morphology. RR ratio and
+waveform area were the two highest-importance engineered features.
+
+![Random Forest Feature Importance](results/random_forest_feature_importance.png)
+
+### Signal-Noise Robustness
+
+Controlled noise experiments were used to determine how decreasing
+ECG signal quality affected classification performance.
+
+![Noise Robustness](results/random_noise_robustness_curve.png)
+
+### Group-Aware Validation
+
+Performance was also evaluated with GroupKFold cross-validation,
+keeping ECG records separated between folds to better assess
+generalization across recordings.
+
+![Grouped Cross-Validation](results/grouped_cv_model_comparison.png)
 
 ## Machine Learning
 
@@ -248,6 +280,7 @@ noise while heartbeat classification degraded more substantially.
 
 This shows that detecting where a heartbeat occurs and determining
 what type of heartbeat it is are separate engineering problems.
+![R-Peak Noise Robustness](results/rpeak_noise_robustness.png)
 
 ## Interactive Dashboard
 
